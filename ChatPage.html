@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/home.css">
+   <link rel="stylesheet" href="css/chatPage.css">
+   <link rel="stylesheet" href="css/all.min.css">
+    <title>Document</title>
+<style>
+    
+    @import url('https://fonts.googleapis.com/css2?family=Almarai&family=Karla&family=Poppins&family=Yanone+Kaffeesatz&display=swap');
+
+    ::-webkit-scrollbar {
+   width: 7px;
+}
+::-webkit-scrollbar-track {
+   
+   box-shadow: inset 0 0  10px rgba var(--primary-color);
+}
+
+::-webkit-scrollbar-thumb {
+   border-radius: 5px;
+   background-color: var(--third-color);
+}
+
+
+    :root{
+    --primary-color: #0a090a;
+    --secondary-color:#adb5bd;
+    --text-color: white;
+    --btn-color:#FB8500;
+    --third-color:rgb(22,22,22);
+}
+   *{
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+       font-family:Poppins ,sans-serif;
+
+   } 
+   .container{
+       position: relative;
+       max-width: 100%;
+       height: 100vh;
+       background-color: rgb(255, 255, 255);
+       display:flex;
+   }
+   .container .left{
+       position: relative;
+       flex: 30%;
+       background:var(--primary-color);
+   }
+   .container .right{
+       position: relative;
+       flex: 70%;
+       background: var(--primary-color);
+       border-right: 1px solid #000;
+   }
+   .header{
+       position:relative;
+       width: 100%;
+       height: 60px;
+       background-color: var(--primary-color);
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       padding: 15px;
+   }
+   .userimage{
+       position: relative;
+       width: 40px;
+       height: 40px;
+       overflow: hidden;
+       border-radius: 50%;
+       border: 2px solid whitesmoke;
+       display: flex;
+   }
+   .nav_icons{
+       display: flex;
+   }
+   .nav_icons li{
+       display: flex;
+       list-style: none;
+       cursor: pointer;
+       color: var(--btn-color);
+       font-size: 1.5em;
+       margin-left: 22px;
+   }
+   .searchinp {
+       position: relative;
+       width: 100%;
+       height: 50px;
+       background-color: var(--third-color);
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       padding:15px;
+   }
+   .searchinp div{
+      width: 100%; 
+      
+   }
+   .searchinp div input{
+       width: 100%;
+       outline: none;
+       border: none;
+       background-color: var(--third-color);
+       padding: 6px;
+       height: 38px;
+       border-radius: 30px;
+       font-size: 14px;
+       padding-left:  40px ;
+       color: #bbb;
+   }
+   .searchinp div input::placeholder{
+       color: rgb(255, 255, 255);
+   }
+   .searchinp div ion-icon{
+       position: absolute;
+       left: 30px;
+       top: 14px;
+       font-size: 1.2em;
+       color: #dcf8c6;
+   }
+   .chatlist{
+       position: relative;
+       height: calc(100% - 110px);
+       overflow-y: auto;
+   }
+   .chatlist .block{
+       position: relative;
+       width: 100%;
+       display: flex;
+       transition: 0.4s ease;
+       align-items: center;
+       padding: 15px;
+       border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+       cursor: pointer;
+   }
+   .chatlist .block.active{
+       background: rgb(29, 29, 29);
+   }
+  
+   
+   .chatlist .block:hover{
+       background-color: var(--third-color);
+   }
+   .chatlist .block .imgbx{
+       position: relative;
+       width: 45px;
+       height: 45px;
+       display: flex;
+       
+       margin-right: 10px;
+       
+   }
+   .chatlist .block .details{
+       position: relative;
+       width: 100%;
+   }
+   .chatlist .block .details .listhead{
+       display: flex;
+       justify-content: space-between;
+       margin-bottom: 5px;
+   }
+   .chatlist .block .details .listhead h4{
+       font-size: 1.1em;
+       font-weight: 600;
+       color:#fff;
+   }
+   .chatlist .block .details .listhead .time{
+       font-size:0.75em ;
+       color: #aaa;
+   }
+   .message{
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+   }
+   .message p{
+       color: #aaa;
+       display: -webkit-box;
+       -webkit-line-clamp: 1;
+       font-size: 0.9em;
+       -webkit-box-orient: vertical;
+       overflow: hidden;
+       text-overflow: ellipsis;
+   }
+   .message .b {
+       background-color: rgb(0, 236, 79);
+       color: #fff;
+       min-width: 20px;
+       height: 20px;
+       border-radius: 50%;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       font-size: 0.75em;
+   }
+   .imgtext{
+       position: relative;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+   }
+   .imgtext h4{
+        font-weight: 400;
+        line-height: 1.2em;
+        margin-left: 15px;
+        color: #dcf8c6;
+   }
+   .imgtext h4 span{
+       font-size: 0.8em;
+       color: #555;
+   }
+   .chatbox{
+       position: relative;
+       width: 100%;
+       height: calc(100% - 120px);
+       padding-left: 35px;
+       padding-bottom: 0%;
+       padding-top: 14px;
+       padding-right: 30px;
+       overflow-y: auto;
+   }
+   .message1{
+       position: relative;
+       display: flex;
+       width: 100%;
+       margin: 5px 0 ;
+   }
+   .message1 p{
+    position: relative;
+    right: 0;
+    text-align: right;
+    max-width: 65%;
+    padding: 12px;
+    background: var(--third-color);
+    border-bottom-left-radius: 2em;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    font-size: 0.9em;
+   }
+   
+  .mymessage{
+      justify-content: flex-end;
+  }
+  .frmessage{
+      justify-content: flex-start;
+  }
+  .message1 p span{
+    display: block;
+    margin-top: 5px;
+    font-size: 0.85em;
+    opacity: 0.5;
+    }
+    .frmessage p{
+        background-color: #fff;
+        text-align: left;
+        color: #000;
+        border-top-left-radius: 2em;
+        border-top-right-radius: 2em;
+        border-bottom-right-radius: 2em;
+        border-bottom-left-radius: 0;
+    }
+    .chatbox_input{
+        position: relative;
+        width: 100%;
+        height: 60px;
+        background: var(--third-color);
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .chatbox_input ion-icon{
+        cursor: pointer;
+        font-size: 1.8em;
+        color: var(--btn-color);
+        }
+    
+    .chatbox_input input{
+        position: relative;
+        width: 90%;
+        margin: 0 20px;
+        padding: 10px 20px;
+        border: none;
+        outline: none;
+        border-radius: 30px;
+        font-size: 1em;
+    }
+    h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: -80px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    color: white;
+}
+    
+
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="left">
+        <div class="header">
+            <div class="userimage">
+                
+                <img src="images/man (2).png" alt="">
+                
+            </div>
+            <h2 >shidatori</h2>
+                <ul class="nav_icons">
+                    <li><ion-icon name="scan-circle-outline"></ion-icon></li>
+                    <li><ion-icon name="chatbox"></ion-icon></li>
+                    <li><ion-icon name="ellipsis-vertical"></ion-icon></li>
+                </ul>
+            </div>
+            <div class="searchinp">
+                <div class="inpute">
+                    <input type="text" placeholder="Find some here">
+                    <ion-icon name="search-outline"></ion-icon>
+                </div>
+            </div>
+    <div class="chatlist">
+    <div class="block active">
+        <div class="imgbx">
+            <img src="images/man (1).png" alt="">
+        </div>
+        <div class="details">
+            <div class="listhead">
+                <h4>Jack Bellow</h4>
+                <p class="time">10:45</p>
+            </div>
+            <div class="message">
+                <b><p>How are you doing ?</p></b>
+                <b class="b">1</b>
+            </div>
+        </div>
+    </div>
+    <div class="block">
+        <div class="imgbx">
+            <img src="images/man (2).png" alt="">
+        </div>
+        <div class="details">
+            <div class="listhead">
+                <h4>Reymond Dembe</h4>
+                <p class="time">10:45</p>
+            </div>
+            <div class="message">
+                <b><p>get some rest </p></b>
+                <b class="b">1</b>
+            </div>
+        </div>
+    </div>
+    <div class="block">
+        <div class="imgbx">
+            <img src="images/woman.png" alt="">
+        </div>
+        <div class="details">
+            <div class="listhead">
+                <h4>Zakaria</h4>
+                <p class="time">10:45</p>
+            </div>
+            <div class="message">
+                <p>Gheyerha</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="block">
+        <div class="imgbx">
+            <img src="images/man (1).png" alt="">
+        </div>
+        <div class="details">
+            <div class="listhead">
+                <h4>Zieck Yeager</h4>
+                <p class="time">10:45</p>
+            </div>
+            <div class="message">
+                <p>you should respect the plan </p>
+            </div>
+        </div>
+    </div>
+    <div class="block">
+        <div class="imgbx">
+            <img src="images/man (2).png" alt="">
+        </div>
+        <div class="details">
+            <div class="listhead">
+                <h4>Jacks Teler</h4>
+                <p class="time">10:45</p>
+            </div>
+            <div class="message">
+                <p>You know that sit amet consectetur adipisicing elit. Laudantium, consequuntur.</p>
+            </div>
+        </div>
+    </div>
+    <div class="block">
+        <div class="imgbx">
+            <img src="images/woman.png" alt="">
+        </div>
+        <div class="details">
+            <div class="listhead">
+                <h4>Kurt Zoma </h4>
+                <p class="time">10:45</p>
+            </div>
+            <div class="message">
+                <p>did you sent your cat to the gym ????</p>
+            </div>
+        </div>
+    </div>
+    <div class="block">
+        <div class="imgbx">
+            <img src="images/man (1).png" alt="">
+        </div>
+        <div class="details">
+            <div class="listhead">
+                <h4>Max </h4>
+                <p class="time">10:45</p>
+            </div>
+            <div class="message">
+                <p>consectetur adipisicing elit ipsum dolor sit.</p>
+            </div>
+        </div>
+    </div>
+    <div class="block">
+        <div class="imgbx">
+            <img src="images/man (2).png" alt="">
+        </div>
+        <div class="details">
+            <div class="listhead">
+                <h4>TEAM1</h4>
+                <p class="time">10:45</p>
+            </div>
+            <div class="message">
+                <p>What's the plan</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="right">
+        <div class="header">
+            <div class="imgtext">
+              <div class="userimage">
+                <img src="images/woman.png" alt="">
+            </div>
+              <h4>Jack Bellow<br><span>Online</span></h4>
+            </div>
+            <ul class="nav_icons">
+              
+              <li><ion-icon name="search-outline"></ion-icon></li>
+              <li><ion-icon name="ellipsis-vertical"></ion-icon></li>
+            </ul>
+           </div>
+           <div class="chatbox">
+               <div class="message1 mymessage">
+                   <p>  This is a fantastic gym!! All the trainers are super nice and take an interest in you no matter what fitness level you’re at. I really like how they give me tips and tricks to get the most out of every workout. <br><span>12:15</span></p>
+               </div>
+               
+               <div class="message1 frmessage">
+                <p>Hi<br><span>12:16</span></p>
+                </div>
+                
+                <div class="message1 frmessage">
+                    <p>Hi<br><span>12:16</span></p>
+                    </div>
+           </div>
+           <div class="chatbox_input" >
+            <ion-icon name="add"></ion-icon>
+            <ion-icon name="microphone"></ion-icon>
+            <ion-icon name="mic"></ion-icon>
+             <input type="text" placeholder="Type a message" >
+            <button style="background: none; outline: none; border: none;"><ion-icon name="send" ></ion-icon></button>
+            </div>
+            </div>
+          </div>
+          </div>
+    </div>
+        
+</div>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+<script>
+           const messages_container = document.querySelector('.chatbox');
+const sendBtn = document.querySelector('.chatbox_input button');
+const input = document.querySelector('.chatbox_input input');
+
+sendBtn.addEventListener('click', addMessage);
+
+function addMessage() {
+    // and also we'll set this img's src to that avatar_image src
+    messages_container.innerHTML += `
+    <div class="message1 mymessage">
+                   <p>${input.value}<br><span>12:15</span></p>
+               </div>`
+    input.value = '';
+    input.focus();
+    const lastMsg = document.querySelector('.chatbox:last-of-type')
+    lastMsg.scrollIntoView(true)
+}
+</script>
+
+
+</body>
+</html>

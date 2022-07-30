@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai&family=Karla&family=Poppins&family=Yanone+Kaffeesatz&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --primary-color: #0a090a;
+    --secondary-color:#adb5bd;
+    --text-color: white;
+    --btn-color:#FB8500;
+    --card-color:rgb(22, 22, 22);
+}
+
+body{
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-family: 'Poppins';
+    box-sizing: border-box;
+}
+
+.home{
+    max-height: 100vh;
+    display: flex;
+}
+.home .bar{
+    width: 3%;
+    height:85vh;
+    padding: 2em;
+    color: var(--text-color);
+    display:grid;
+    justify-content: space-between;
+
+}
+.home .bar i{
+    font-size: 30px;
+    margin-bottom: 2em;
+    margin-left: -.5em;
+    padding: .8em;
+    border-radius: 1em;
+}
+.home .bar .menu img{
+    width: 25px;
+    margin-bottom: 1.5em;
+    background-color: var(--primary-color);
+    padding: .8em;
+    border-radius: 1em;
+}
+.home .bar .menu .one{
+    background-color: var(--btn-color);
+    padding: .8em;
+    border-radius: 1em;
+}
+.home .bar .bot{
+    padding: .8em;
+    border-radius: 1em;
+    width: 25px;
+    margin-top: 3em;
+}
+/*Left*/
+
+.home .left{
+    width: 75%;
+    padding: 2em;
+}
+.home .left .top{
+    display: flex;
+    justify-content: space-between;
+}
+.home .left .top img{
+    width: 20px;
+}
+.home .left .top .info .title{
+    font-size: 20px;
+    font-weight: 700;
+}
+.home .left .top .info .desc{
+    font-size: 14px;
+    color: var(--secondary-color);
+}
+.home .left .top .search input{
+    border: 0;
+    border-radius: 2em;
+    background-color: var(--card-color);
+    color: var(--text-color);
+    padding: .9em 2em;
+    width: 250px;
+    margin-right: 2em;
+    box-shadow: 5px 5px 5px var(--primary-color);
+}
+.home .left .top .search img{
+    width:25px;
+    margin-bottom: -.4em;
+}
+.home .left .top .search .ser{
+    position: relative;
+    margin-right: -15em;
+    margin-bottom: -.4em;
+    width: 20px;
+}
+
+.home .center .one{
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 2em;
+    margin-bottom: 0;
+}
+.home .center .one p{
+    font-size: 30px;
+}
+.home .center .user{
+    display: flex;
+    margin: 0 4em;
+}
+.home .center .user img{
+    width: 40px;
+    margin-right: 1.5em;
+    border-radius: 50%;
+    border: 3px var(--text-color) solid;
+}
+.home .center h4{
+    margin-left: 2em;
+    margin-top: 1.5em;
+    font-size: 20px;
+}
+.home .center .last{
+    margin-top: 5em;
+}
+.home .center .exe{
+    display: flex;
+    justify-content: space-between;
+    margin: 3em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.home .center .exe .card img{
+    width: 300px;
+    border-radius: 2em;
+}
+.home .center .exe .card .info{
+    margin-left: 1.5em;
+    margin-top: -10em;
+}
+.home .center .exe .card .info h3{
+   letter-spacing: .1em;
+}
+.home .center .exe .card .info p{
+    font-size: 13px;
+    padding: .5em 0;
+    opacity: .5;
+}
+.home .center .exe .card .info a{
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+.home .center .exe .card .info span{
+    background-color: var(--text-color);
+    color: var(--primary-color);
+    padding: .5em 1em;
+    border-radius: 2em;
+    font-size: 12px;
+    margin-top: -1em;
+}
+.home .center .exe .card .info span i{
+    margin-right: .5em;
+}
+
+.home .center .axa{
+    display: flex;
+    justify-content: space-between;
+    margin: 1em;
+}
+.home .center .axa .card{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1em;
+    background-color: var(--card-color);
+    border-radius: 2em;
+    width: 50%;
+    margin: 0 1em;
+}
+.home .center .axa .card img{
+    width: 130px;
+    border-radius: 2em;
+    margin-right: .5em;
+}
+.home .center .axa .card h5{
+    letter-spacing: .1em;
+    margin-top: 1em;
+    margin-bottom: .5em;
+}
+.home .center .axa .card p{
+    font-size: 13px;
+    opacity: .5;
+}
+.home .center .axa .card .rule{
+    width: 100px;
+    height: 5px;
+    border-radius: 2em;
+    background-color: var(--btn-color);
+    margin-top: .5em;
+    box-shadow: 5px 5px 5px rgb(20, 20, 20);
+}
+.home .center .axa .card a{
+    margin-top: 1em;
+    margin-left: 1em;
+    font-size: 25px;
+    text-decoration: none;
+    color: var(--text-color);
+}
+/*Right*/
+
+.home .righto{
+    width: 50%;
+    padding: 2em;
+    padding-bottom: 0;
+    text-align: center;
+    margin-top: 2em;
+}
+.home .righto h4{
+    margin-bottom: 1em;
+    font-size: 25px;
+    text-align: left;
+    padding-left: .5em;
+}
+.home .righto .card{
+    padding: 2em;
+    background-color: var(--card-color);
+    border-radius: 2em;
+    box-shadow: 5px 5px 5px var(--primary-color);
+}
+.home .righto .card .desc{
+    margin: 1em 0;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.home .righto .card .info{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2em 0;
+    font-size: 15px;
+}
+.home .righto .card .info i{
+    color: var(--btn-color);
+}
+.home .righto .card .info span{
+    color: var(--text-color);
+    margin-left: 1em;
+}
+.home .righto video{
+    margin-top: 2em;
+    width: 95%;
+    border-radius: 1em;
+}
+.home .righto .pro{
+    display: flex;
+    justify-content: space-between;
+    margin: 2em;
+    margin-top: 4em;
+}
+.home .righto .pro .men{
+    display: flex;
+}
+.home .righto .pro .men p{
+    margin-top: .5em;
+    margin-left: .5em;
+}
+.home .righto .pro .men img{
+    width: 40px;
+    border-radius: 50%;
+}
+.home .righto .pro button{
+    border: none;
+    border-radius: 2em;
+    padding: 1em 3em;
+    font-weight: 600;
+    color: var(--text-color);
+    background-color: var(--btn-color);
+    cursor: pointer;
+
+}
+
+#ex2{
+    display: none;
+}

@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai&family=Karla&family=Poppins&family=Yanone+Kaffeesatz&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.logOut {
+    width: 70px;
+    height: 45px;
+    border-radius: 12px;
+    margin-left: -15px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+:root {
+    --primary-color: #0a090a;
+    --secondary-color: #adb5bd;
+    --text-color: white;
+    --btn-color: #FB8500;
+    --card-color: rgb(22, 22, 22);
+}
+
+
+
+body {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-family: 'Poppins';
+    box-sizing: border-box;
+}
+
+.home {
+    max-height: 100vh;
+    display: flex;
+}
+
+.home .bar {
+    width: 3%;
+    height: 85vh;
+    padding: 2em;
+    color: var(--text-color);
+    display: grid;
+    justify-content: space-between;
+
+}
+
+.home .bar i {
+    font-size: 30px;
+    margin-bottom: 2em;
+    margin-left: -.5em;
+    padding: .8em;
+    border-radius: 1em;
+}
+
+.home .bar .menu img {
+    width: 25px;
+    margin-bottom: 1.5em;
+    background-color: var(--primary-color);
+    padding: .8em;
+    border-radius: 1em;
+}
+
+.home .bar .menu .one {
+    background-color: var(--btn-color);
+    padding: .8em;
+    border-radius: 1em;
+}
+
+.home .bar .bot {
+    padding: .8em;
+    border-radius: 1em;
+    width: 25px;
+    margin-top: 3em;
+}
+
+/*Left*/
+
+.home .left {
+    width: 90%;
+    padding: 2em;
+}
+
+.home .left .top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.home .left .top img {
+    width: 20px;
+}
+
+.home .left .top .info .title {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.home .left .top .info .desc {
+    font-size: 14px;
+    color: var(--secondary-color);
+}
+
+.home .left .top .search input {
+    border: 0;
+    border-radius: 2em;
+    background-color: var(--card-color);
+    color: var(--text-color);
+    padding: .9em 2em;
+    width: 250px;
+    margin-right: 2em;
+    box-shadow: 5px 5px 5px var(--primary-color);
+}
+
+.home .left .top .search img {
+    width: 25px;
+    margin-bottom: -.4em;
+}
+
+.home .left .top .search .ser {
+    position: relative;
+    margin-right: -15em;
+    margin-bottom: -.4em;
+    width: 20px;
+}
+
+/*Right*/
+.home .right {
+    width: 40%;
+}
+
+/*Center*/
+
+
+.home .left .center {
+    margin: 2em 1em;
+    margin-top: 3em;
+    background-color: var(--card-color);
+    padding: 2em;
+    box-shadow: 5px 5px 5px var(--primary-color);
+    border-radius: 2em;
+}
+
+.home .left .center .one {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2em;
+}
+
+.home .left .center .one .btn a {
+    color: var(--text-color);
+    background-color: var(--card-color);
+    box-shadow: 5px 5px 5px var(--primary-color);
+    padding: 1em;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 2em;
+    margin-right: 1em;
+}
+
+.home .left .center .one .btn a:nth-child(2) {
+    background-color: var(--btn-color);
+}
+
+.home .left .center .walo {
+    display: flex;
+    margin-bottom: 1em;
+}
+
+.home .left .center .walo h3 {
+    color: var(--text-color);
+    letter-spacing: .1em;
+    text-transform: uppercase;
+
+}
+
+.home .left .center .walo hr {
+    width: 100%;
+    height: .2px;
+    border: .2px var(--secondary-color) solid;
+    opacity: .3;
+    margin-top: 1em;
+    margin-left: .5em;
+}
+
+.home .left .center .inp1 {
+    display: flex;
+    justify-content: space-between;
+    margin: 2em 0;
+}
+
+.home .left .center .inp1 .lab label {
+    color: var(--text-color);
+}
+
+.home .left .center .inp1 .lab input {
+    border: none;
+    border-bottom: 2px var(--secondary-color) solid;
+    background-color: var(--card-color);
+    padding: 1em;
+    color: var(--text-color);
+    font-size: 16px;
+    width: 300px;
+    padding-left: .5em;
+    transition: .5s;
+}
+
+.home .left .center .inp1 .lab input:focus {
+    outline: none;
+    border-bottom: 2px var(--btn-color) solid;
+
+}
+
+/*Right*/
+
+.home .righto {
+    width: 50%;
+    height: 95vh;
+    background-color: var(--card-color);
+    padding: 2em;
+    padding-bottom: 0;
+    text-align: center;
+}
+
+.home .righto .top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2em;
+}
+
+.home .righto .top p {
+    color: var(--text-color);
+    font-size: 30px;
+    margin-top: -.5em;
+
+}
+
+.home .righto .user {
+    margin: .5em 0;
+    margin-bottom: 0;
+    font-size: 20px;
+}
+
+.home .righto .desc {
+    margin: 1em 0;
+    margin-top: 0;
+    font-size: 14px;
+    color: var(--secondary-color);
+    opacity: .4;
+}
+
+.home .righto img {
+    width: 100px;
+}
+
+.home .righto button {
+    border: 0;
+    background-color: var(--btn-color);
+    border-radius: 1.5em;
+    padding: 1em;
+    color: var(--text-color);
+    font-weight: 550;
+    cursor: pointer;
+}
+
+.home .righto button img {
+    width: 15px;
+    margin-right: .5em;
+}
+
+.home .righto .calen .one {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2em;
+}
+
+.home .righto .calen .one img {
+    width: 20px;
+    margin-left: 1em;
+    transition: .5s;
+}
+
+.home .righto .calen .one img:nth-child(1) {
+    width: 20px;
+    margin-left: 1em;
+    transform: rotate(180deg);
+    transition: .5s;
+}
+
+.home .righto .calen .one img:hover {
+    transform: scale(1.5);
+}
+
+.home .righto .calen .days {
+    display: flex;
+    justify-content: space-between;
+    margin: 2em 1em;
+    color: var(--secondary-color);
+}
+
+.home .righto .calen .dayn {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em;
+    font-weight: 600;
+}
+
+.home .righto .calen .dayn p {
+    border-radius: 50%;
+    padding: .2em .5em;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.home .righto .calen .dayn p:hover {
+    background-color: var(--btn-color);
+}
+
+.home .righto .calen .dayn p:nth-child(4) {
+    background-color: var(--btn-color);
+    border-radius: 50%;
+    padding: .2em .5em;
+}
+
+.home .righto .amis {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    margin-top: 1em;
+}
+
+.home .righto .amis .time {
+    font-size: 18px;
+    margin-top: .2em;
+}
+
+.home .righto .amis .mod {
+    font-size: 40px;
+    margin-top: -.3em;
+    color: var(--btn-color);
+}
+
+.home .righto .amis .info .t1 {
+    font-size: 14px;
+    color: var(--secondary-color);
+    opacity: .6;
+}
+
+.home .righto .amis .info .t2 {
+    font-size: 14px;
+}
+
+.home .righto .amis img {
+    width: 40px;
+    height: 40px;
+}
+
+.home .righto .amis .plus {
+    position: relative;
+    margin-top: .5em;
+}

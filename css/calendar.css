@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai&family=Karla&family=Poppins&family=Yanone+Kaffeesatz&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --primary-color: #0a090a;
+    --secondary-color: #adb5bd;
+    --text-color: white;
+    --btn-color: #FB8500;
+    --card-color: rgb(22, 22, 22);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px var(--primary-color);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: var(--card-color);
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-family: 'Poppins';
+    box-sizing: border-box;
+}
+
+.home {
+    max-height: 100vh;
+    display: flex;
+}
+
+.home .bar {
+    width: 3%;
+    height: 85vh;
+    padding: 2em;
+    color: var(--text-color);
+    display: grid;
+    justify-content: space-between;
+
+}
+
+.home .bar i {
+    font-size: 30px;
+    margin-bottom: 2em;
+    margin-left: -.5em;
+    padding: .8em;
+    border-radius: 1em;
+}
+
+.home .bar .menu img {
+    width: 25px;
+    margin-bottom: 1.5em;
+    background-color: var(--primary-color);
+    padding: .8em;
+    border-radius: 1em;
+}
+
+.home .bar .menu .one {
+    background-color: var(--btn-color);
+    padding: .8em;
+    border-radius: 1em;
+}
+
+.home .bar .bot {
+    padding: .8em;
+    border-radius: 1em;
+    width: 25px;
+    margin-top: 3em;
+}
+
+/*Left*/
+
+.home .left {
+    width: 85%;
+    padding: 2em;
+}
+
+.home .left .top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.home .left .top img {
+    width: 20px;
+}
+
+.home .left .top .info .title {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.home .left .top .info .desc {
+    font-size: 14px;
+    color: var(--secondary-color);
+}
+
+.home .left .top .search input {
+    border: 0;
+    border-radius: 2em;
+    background-color: var(--card-color);
+    color: var(--text-color);
+    padding: .9em 2em;
+    width: 250px;
+    margin-right: 2em;
+    box-shadow: 5px 5px 5px var(--primary-color);
+}
+
+.home .left .top .search img {
+    width: 25px;
+    margin-bottom: -.4em;
+}
+
+.home .left .top .search .ser {
+    position: relative;
+    margin-right: -15em;
+    margin-bottom: -.4em;
+    width: 20px;
+}
+
+/*Right*/
+
+/*Center*/
+
+.home .center {
+    margin: 1em;
+}
+
+.home .center .one {
+    display: flex;
+    justify-content: space-between;
+}
+
+.home .center .one .btn button {
+    margin-left: 1em;
+    padding: 1em 2em;
+    background-color: var(--card-color);
+    border-radius: 1.5em;
+    box-shadow: 5px 5px 5px var(--primary-color);
+    border: none;
+    color: var(--text-color);
+    font-weight: 600;
+    letter-spacing: .1em;
+    cursor: pointer;
+}
+
+.home .cal {
+    margin: 1.5em 0;
+    padding: 2em;
+    background-color: var(--card-color);
+    box-shadow: 5px 5px 5px var(--primary-color);
+    border-radius: 2em;
+    height: 485px;
+}
+
+.home .cal .days {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.home .cal .days .day:nth-child(4) {
+    background-color: var(--btn-color);
+    border-radius: 2em;
+    padding: .3em;
+    margin-top: -.5em;
+}
+
+.home .cal .days h5 {
+    text-transform: uppercase;
+    margin-bottom: 1em;
+}
+
+.home .cal .vr {
+    opacity: .1;
+}
+
+.home .cal .hor {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 2em;
+}
+
+.home .cal .hor-end {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 2em;
+    position: relative;
+    margin-top: -41em;
+}
+
+.home .cal .hor-end hr {
+    height: calc(70px*4.6);
+    border: .2px var(--text-color) solid;
+    opacity: .1;
+}
+
+.home .cal .hor hr {
+    height: 70px;
+    border: .2px var(--text-color) solid;
+    opacity: .1;
+}
+
+.home .cal .bod .lef .sect p {
+    margin-bottom: 70px;
+    margin-right: 1em;
+    margin-top: -.8em;
+}
+
+.home .cal .bod .lef .sect {
+    display: flex;
+}
+
+.home .cal .bod .lef .sect hr {
+    width: 85%;
+    height: .2px;
+    border: .2px solid var(--text-color);
+    opacity: .1;
+}
+
+.home .cal .bod .lef .sect .pro {
+    margin-bottom: 0;
+}
+
+.home .cal .bod .rig .card {
+    padding: .5em 1em;
+    width: 80px;
+    background-color: var(--card-color);
+    box-shadow: 5px 5px 5px var(--primary-color);
+    border-top-left-radius: 1.5em;
+    border-bottom-right-radius: 1.5em;
+    position: relative;
+    top: -20.5em;
+    margin-bottom: .2em;
+    z-index: 1;
+}
+
+.home .cal .bod .rig .card:nth-child(1) {
+    position: relative;
+    margin-left: 32em;
+    margin-top: -.3em;
+}
+
+.home .cal .bod .rig .card:nth-child(2) {
+    position: relative;
+    margin-left: 18.5em;
+}
+
+.home .cal .bod .rig .card:nth-child(3) {
+    position: relative;
+    margin-left: 25.5em;
+}
+
+.home .cal .bod .rig .card:nth-child(4) {
+    position: relative;
+    margin-left: 5em;
+    margin-top: .5em;
+}
+
+.home .cal .bod .rig .card p {
+    font-size: 12px;
+}
+
+.home .cal .bod .rig .card span {
+    font-size: 10px;
+    color: var(--btn-color);
+}
+
+
+/*Right*/
+
+.home .righto {
+    width: 50%;
+    height: 95vh;
+    background-color: var(--card-color);
+    padding: 2em;
+    padding-bottom: 0;
+    text-align: center;
+}
+
+.home .righto .top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2em;
+}
+
+.home .righto .top p {
+    color: var(--text-color);
+    font-size: 30px;
+    margin-top: -.5em;
+
+}
+
+.home .righto .user {
+    margin: .5em 0;
+    margin-bottom: 0;
+    font-size: 20px;
+}
+
+.home .righto .desc {
+    margin: 1em 0;
+    margin-top: 0;
+    font-size: 14px;
+    color: var(--secondary-color);
+    opacity: .4;
+}
+
+.home .righto img {
+    width: 100px;
+}
+
+.home .righto button {
+    border: 0;
+    background-color: var(--btn-color);
+    border-radius: 1.5em;
+    padding: 1em;
+    color: var(--text-color);
+    font-weight: 550;
+    cursor: pointer;
+}
+
+.home .righto button img {
+    width: 15px;
+    margin-right: .5em;
+}
+
+.home .righto .one {
+    margin: 2em;
+}
+
+.home .righto .one .one-start {
+    display: flex;
+    justify-content: space-between;
+}
+
+.home .righto .one .one-start .let {
+    display: flex;
+}
+
+.home .righto .one .one-start .let i {
+    color: var(--btn-color);
+    margin-right: .5em;
+}
+
+.home .righto .two {
+    padding: 1em 2em;
+}
+
+.home .righto .two .elem {
+    display: flex;
+    margin: 2em 0;
+}
+
+.home .righto .two .elem i {
+    color: var(--btn-color);
+    font-size: 20px;
+    margin-right: 1em;
+    margin-top: .5em;
+}
+
+.home .righto .two .elem p {
+    background-color: var(--card-color);
+    box-shadow: 5px 5px 5px var(--primary-color);
+    padding: .5em 2em;
+    width: 250px;
+    text-align: left;
+    border-radius: .5em;
+
+}
